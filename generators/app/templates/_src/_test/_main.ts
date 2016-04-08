@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import <%= capModel %> from "../models/<%= model %>";
-import <%= capName %> from "../components/<%= name %>";
+import <%= capModel %> from "../app/models/<%= model %>";
+import <%= capName %> from "../app/components/<%= name %>";
 
 (function () {
     const <%= model %> = new <%= capModel %>("Some property value");

@@ -31,8 +31,8 @@ module.exports = yeoman.Base.extend({
         this.prompt(prompts, function (props) {
             this.props = props;
             this.props.capName = this.props.name.charAt(0).toUpperCase() + this.props.name.slice(1);
-            this.props.model = this.props.name + "Model";
-            this.props.capModel = this.props.capName + "Model";
+            this.props.model = this.props.name + "Props";
+            this.props.capModel = this.props.capName + "Props";
             done();
         }.bind(this));
     },

@@ -3,10 +3,10 @@ var glob = require("glob");
 
 module.exports = {
     entry: {
-        src: glob.sync("./src/app/**/(*.ts|*.tsx)")
+        <%=name%>: glob.sync("./src/app/**/(*.ts|*.tsx)")
     },
     output: {
-        filename: "dist/[name].bundle.js",
+        filename: "dist/[name].js",
         publicPath: "dist/"
     },
     resolve: {

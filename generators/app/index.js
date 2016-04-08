@@ -73,10 +73,15 @@ module.exports = yeoman.Base.extend({
                 this.props
             );
             this.fs.copyTpl(
-                this.templatePath('_src/_app/_models/_model.ts'),
-                this.destinationPath('src/app/models/' + this.props.model + '.ts'),
-                this.props
-            );
+            this.templatePath('_src/_app/_models/_model.ts'),
+            this.destinationPath('src/app/models/' + this.props.model + '.ts'),
+            this.props
+          );
+          this.fs.copyTpl(
+            this.templatePath('_src/_app/_typings.d.ts'),
+            this.destinationPath('src/app/' + this.props.name + '.d.ts'),
+            this.props
+          );
         },
         test: function () {
             this.fs.copyTpl(

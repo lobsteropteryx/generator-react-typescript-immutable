@@ -1,0 +1,41 @@
+{
+    "name": "<%= name %>",
+    "version": "0.0.0",
+    "description": "<%= description %>",
+    "main": "main",
+    "scripts": {
+        "build": "webpack --color --watch | karma start",
+        "test": "karma start"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "browser-sync": "^2.11.1",
+        "jasmine-ajax": "~3.1.1",
+        "jasmine-core": "~2.3.4",
+        "karma": "^0.13.21",
+        "karma-chrome-launcher": "~0.1.12",
+        "karma-ie-launcher": "~0.2.0",
+        "karma-jasmine": "~0.3.5",
+        "karma-jasmine-ajax": "~0.1.12",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "karma-webpack": "^1.7.0",
+        "phantomjs-prebuilt": "^2.1.5",
+        "ts-loader": "^0.8.1",
+        "tsd": "^0.6.5",
+        "tslint": "^3.2.1",
+        "typescript": "^1.8.5",
+        "webpack": "^1.12.14"
+    },
+    "dependencies": {
+        "immutable": "^3.7.6",
+        "react": "^0.14.7",
+        "react-dom": "^0.14.7",
+    }
+}

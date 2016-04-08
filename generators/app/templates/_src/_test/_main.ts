@@ -6,7 +6,7 @@ import <%= capModel %> from "./<%= model %>";
 import <%= capName %> from "./<%= name %>";
 
 (function () {
-    const <%= model %> = new <%= capModel %>();
+    const <%= model %> = new <%= capModel %>("Some property value");
     const renderApp = () => {
         ReactDOM.render(React.createElement(<%= capName =>, <%= model %>), document.getElementById('content'));
     };

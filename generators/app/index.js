@@ -67,17 +67,31 @@ module.exports = yeoman.Base.extend({
             );
         },
         src: function () {
-
-        },
-        test: function () {
             this.fs.copyTpl(
-                this.templatePath('_test/_index.html'),
-                this.destinationPath('test/index.html'),
+                this.templatePath('_src/_app/_components/_component.tsx'),
+                this.destinationPath('src/app/components/' + this.props.name + '.tsx'),
                 this.props
             );
             this.fs.copyTpl(
-                this.templatePath('_test/_main.ts'),
-                this.destinationPath('test/main.ts'),
+                this.templatePath('_src/_app/_models/_model.ts'),
+                this.destinationPath('src/app/models/' + this.props.model + '.ts'),
+                this.props
+            );
+        },
+        test: function () {
+            this.fs.copyTpl(
+                this.templatePath('_src/_test/_index.html'),
+                this.destinationPath('src/test/index.html'),
+                this.props
+            );
+            this.fs.copyTpl(
+                this.templatePath('_src/_test/_main.ts'),
+                this.destinationPath('src/test/main.ts'),
+                this.props
+            );
+            this.fs.copyTpl(
+                this.templatePath('_src/_test/_spec/_modelSpec.ts'),
+                this.destinationPath('src/test/spec/' + this.props.model + '.ts'),
                 this.props
             );
         }

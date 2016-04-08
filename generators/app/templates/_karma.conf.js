@@ -26,6 +26,11 @@ module.exports = function(config) {
                 watched: true,
                 served: false
             },
+            {
+                pattern: 'src/test/main.ts',
+                watched: true,
+                served: false
+            },
             'src/test/spec/*.ts'
         ],
 

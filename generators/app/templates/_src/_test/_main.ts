@@ -2,13 +2,13 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import <%= capModel %> from "./<%= model %>";
-import <%= capName %> from "./<%= name %>";
+import <%= capModel %> from "../models/<%= model %>";
+import <%= capName %> from "../components/<%= name %>";
 
 (function () {
     const <%= model %> = new <%= capModel %>("Some property value");
     const renderApp = () => {
-        ReactDOM.render(React.createElement(<%= capName =>, <%= model %>), document.getElementById('content'));
+        ReactDOM.render(React.createElement(<%= capName %>, <%= model %>), document.getElementById('content'));
     };
     renderApp();
 })();

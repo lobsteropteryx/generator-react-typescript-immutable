@@ -1,11 +1,11 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../../typings/tsd.d.ts" />
 
-import <%=capModel%> from '../../app/models/<%=capModelName%>';
+import <%=capModel%> from '../../app/models/<%=capModel%>';
 //
-describe("<%=capModelName%>", () => {
+describe("<%=capModel%>", () => {
 
     it("Can be instantiated", () => {
-        var <%=model%> = new <%=capModel%>(store);
+        var <%=model%> = new <%=capModel%>("some value");
         expect(<%=model%>).toEqual(jasmine.any(<%=capModel%>));
     });
 });

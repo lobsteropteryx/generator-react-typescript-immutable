@@ -16,7 +16,9 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/spec/tests.webpack.js'
+            'src/app/**/*.ts',
+            'src/app/**/*.tsx',
+            'src/test/spec/*.ts'
         ],
 
         webpack: webpackConfig,
@@ -32,12 +34,12 @@ module.exports = function(config) {
 
         ],
 
-
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-
-            'src/spec/tests.webpack.js': ['webpack']
+            'src/app/**/*.ts': ['webpack'],
+            'src/app/**/*.tsx': ['webpack'],
+            'src/test/spec/*.ts': ['webpack']
         },
 
         // test results reporter to use
@@ -45,14 +47,11 @@ module.exports = function(config) {
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress'],
 
-
         // web server port
         port: 9876,
 
-
         // enable / disable colors in the output (reporters and logs)
         colors: true,
-
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG

@@ -1,6 +1,7 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
 import * as React from 'react';
+import <%=capModel%> from '../models/<%=capModel%>';
 
 export default class <%=capName%> extends React.Component<I<%=capName%>Props, I<%=capName%>State> {
     constructor(props:I<%=capName%>Props) {
@@ -9,7 +10,7 @@ export default class <%=capName%> extends React.Component<I<%=capName%>Props, I<
 
     public render() {
         return <div>
-                {props.someProperty}
+                {this.props.someProperty}
             </div>
     }
 }

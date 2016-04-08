@@ -26,12 +26,12 @@
         "karma-jasmine-ajax": "~0.1.12",
         "karma-phantomjs-launcher": "^1.0.0",
         "karma-webpack": "^1.7.0",
-        "phantomjs-prebuilt": "^2.1.5",
         "ts-loader": "^0.8.1",
         "tsd": "^0.6.5",
         "tslint": "^3.2.1",
         "typescript": "^1.8.5",
-        "webpack": "^1.12.14"
+        "webpack": "^1.12.14",
+        "glob": "~7.0.3"
     },
     "dependencies": {
         "immutable": "^3.7.6",

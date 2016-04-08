@@ -30,8 +30,9 @@ module.exports = yeoman.Base.extend({
 
         this.prompt(prompts, function (props) {
             this.props = props;
-            // To access props later use this.props.someAnswer;
-
+            this.props.capName = this.props.name.charAt(0).toUpperCase() + this.props.name.slice(1);
+            this.props.model = this.props.name + "Model";
+            this.props.capModel = this.props.capName + "Model";
             done();
         }.bind(this));
     },
@@ -40,29 +41,44 @@ module.exports = yeoman.Base.extend({
         config: function () {
             this.fs.copyTpl(
                 this.templatePath('_package.json'),
-                this.destinationPath('package.json'), {
-                    name: this.props.name,
-                    description: this.props.description
-                }
+                this.destinationPath('package.json'),
+                this.props
             );
             this.fs.copyTpl(
                 this.templatePath('_readme.md'),
-                this.destinationPath('readme.md'), {
-                    name: this.props.name,
-                    description: this.props.description
-                }
+                this.destinationPath('readme.md'),
+                this.props
             );
             this.fs.copy(
-                this.templatePath('tsd.json'),
+                this.templatePath('_tsd.json'),
                 this.destinationPath('tsd.json')
             );
             this.fs.copy(
-                this.templatePath('webpack.config.js'),
+                this.templatePath('_webpack.config.js'),
                 this.destinationPath('webpack.config.js')
             );
             this.fs.copy(
-                this.templatePath('karma.conf.js'),
+                this.templatePath('_karma.conf.js'),
                 this.destinationPath('karma.conf.js')
+            );
+            this.fs.copy(
+                this.templatePath('_tsconfig.json'),
+                this.destinationPath('tsconfig.json')
+            );
+        },
+        src: function () {
+
+        },
+        test: function () {
+            this.fs.copyTpl(
+                this.templatePath('_test/_index.html'),
+                this.destinationPath('test/index.html'),
+                this.props
+            );
+            this.fs.copyTpl(
+                this.templatePath('_test/_main.ts'),
+                this.destinationPath('test/main.ts'),
+                this.props
             );
         }
     },

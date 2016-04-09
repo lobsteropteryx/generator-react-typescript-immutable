@@ -2,9 +2,9 @@
     "name": "<%= name %>",
     "version": "0.0.0",
     "description": "<%= description %>",
-    "main": "main",
+    "main": "dist/<%= name %>",
     "scripts": {
-        "build": "webpack --color --watch | karma start",
+        "build": "tsc",
         "test": "karma start"
     },
     "repository": {
@@ -12,6 +12,10 @@
         "url": ""
     },
     "keywords": [
+    ],
+    "files": [
+        "dist",
+        "src/app/<%=name%>.d.ts"
     ],
     "author": "",
     "license": "MIT",

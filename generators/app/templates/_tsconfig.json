@@ -1,9 +1,19 @@
 {
     "compilerOptions": {
         "module": "amd",
+        "declaration": true,
         "noImplicitAny": true,
         "target": "ES5",
         "jsx": "react",
-        "sourceMap": true
-    }
+        "sourceMap": true,
+        "out": "./dist/<%= name %>.js"
+    },
+    "filesGlob": [
+        "./src/app/**/*.*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "src/test"
+    ]
 }

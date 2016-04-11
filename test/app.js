@@ -23,7 +23,6 @@ describe('generator-react-typescript-immutable:app', function () {
       //src files
       'src/app/components/testComponent.tsx',
       'src/app/models/testComponentProps.ts',
-      'src/app/testComponent.d.ts',
       //test files
       'src/test/index.html',
       'src/test/main.ts',

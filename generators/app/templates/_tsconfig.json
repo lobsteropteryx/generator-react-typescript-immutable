@@ -6,7 +6,7 @@
         "target": "ES5",
         "jsx": "react",
         "sourceMap": true,
-        "out": "./dist/<%= name %>.js"
+        "outDir": "./dist"
     },
     "filesGlob": [
         "./src/app/**/*.*"

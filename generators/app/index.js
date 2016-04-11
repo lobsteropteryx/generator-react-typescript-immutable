@@ -54,10 +54,6 @@ module.exports = yeoman.Base.extend({
                 this.destinationPath('tsd.json')
             );
             this.fs.copy(
-                this.templatePath('_webpack.config.js'),
-                this.destinationPath('webpack.config.js')
-            );
-            this.fs.copy(
                 this.templatePath('_karma.conf.js'),
                 this.destinationPath('karma.conf.js')
             );

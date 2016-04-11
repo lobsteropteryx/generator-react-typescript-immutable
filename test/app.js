@@ -20,7 +20,6 @@ describe('generator-react-typescript-immutable:app', function () {
       'readme.md',
       'tsconfig.json',
       'tsd.json',
-      'webpack.config.js',
       //src files
       'src/app/components/testComponent.tsx',
       'src/app/models/testComponentProps.ts',

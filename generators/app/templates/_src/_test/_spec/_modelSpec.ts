@@ -1,6 +1,6 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
-import <%=capModel%> from '../../app/models/<%=capModel%>';
+import <%=capModel%> from '../../app/models/<%=model%>';
 //
 describe("<%=capModel%>", () => {
 

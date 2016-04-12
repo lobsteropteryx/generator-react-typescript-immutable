@@ -14,19 +14,25 @@ describe('generator-react-typescript-immutable:app', function () {
 
   it('creates files', function () {
     assert.file([
-      //config files
-      'karma.conf.js',
-      'package.json',
-      'readme.md',
-      'tsconfig.json',
-      'tsd.json',
-      //src files
-      'src/app/components/testComponent.tsx',
-      'src/app/models/testComponentProps.ts',
-      //test files
-      'src/test/index.html',
-      'src/test/main.ts',
-      'src/test/spec/testComponentPropsSpec.ts'
+        //config files
+        'karma.conf.js',
+        'package.json',
+        'readme.md',
+        'tsconfig.json',
+        'tsd.json',
+        //src files
+        'src/app/components/testComponent.tsx',
+        'src/app/models/testComponentProps.ts',
+        'src/app/index.ts',
+        //test files
+        'src/test/index.html',
+        'src/test/main.ts',
+        'src/test/tsconfig.json',
+        'src/test/webpack.config.js',
+        //spec files
+        'src/test/spec/testComponentPropsSpec.ts',
+        'src/test/spec/tsconfig.json',
+        'src/test/spec/tests.webpack.js'
     ]);
   });
 });

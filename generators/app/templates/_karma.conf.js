@@ -1,6 +1,7 @@
 // Karma configuration
+// Generated on Thu Jun 11 2015 22:45:26 GMT-0700 (Pacific Daylight Time)
 
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require('./src/test/webpack.config.js');
 webpackConfig.entry = {};
 
 module.exports = function(config) {
@@ -16,22 +17,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            {
-                pattern: 'src/app/**/*.ts',
-                watched: true,
-                served: false
-            },
-            {
-                pattern: 'src/app/**/*.tsx',
-                watched: true,
-                served: false
-            },
-            {
-                pattern: 'src/test/main.ts',
-                watched: true,
-                served: false
-            },
-            'src/test/spec/*.ts'
+            'src/test/spec/tests.webpack.js'
         ],
 
         webpack: webpackConfig,
@@ -47,12 +33,12 @@ module.exports = function(config) {
 
         ],
 
+
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/app/**/*.ts': ['webpack'],
-            'src/app/**/*.tsx': ['webpack'],
-            'src/test/spec/*.ts': ['webpack']
+
+            'src/test/spec/tests.webpack.js': ['webpack']
         },
 
         // test results reporter to use
@@ -60,11 +46,14 @@ module.exports = function(config) {
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress'],
 
+
         // web server port
         port: 9876,
 
+
         // enable / disable colors in the output (reporters and logs)
         colors: true,
+
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG

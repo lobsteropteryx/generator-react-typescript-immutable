@@ -61,18 +61,27 @@ module.exports = yeoman.Base.extend({
                 this.templatePath('_tsconfig.json'),
                 this.destinationPath('tsconfig.json')
             );
+            this.fs.copy(
+                this.templatePath('_.gitignore'),
+                this.destinationPath('.gitignore')
+            );
         },
         src: function () {
+            this.fs.copyTpl(
+                this.templatePath('_src/_app/_index.ts'),
+                this.destinationPath('src/app/index.ts'),
+                this.props
+            );
             this.fs.copyTpl(
                 this.templatePath('_src/_app/_components/_component.tsx'),
                 this.destinationPath('src/app/components/' + this.props.name + '.tsx'),
                 this.props
             );
             this.fs.copyTpl(
-            this.templatePath('_src/_app/_models/_model.ts'),
-            this.destinationPath('src/app/models/' + this.props.model + '.ts'),
-            this.props
-          );
+                this.templatePath('_src/_app/_models/_model.ts'),
+                this.destinationPath('src/app/models/' + this.props.model + '.ts'),
+                this.props
+            );
         },
         test: function () {
             this.fs.copyTpl(
@@ -85,10 +94,27 @@ module.exports = yeoman.Base.extend({
                 this.destinationPath('src/test/main.ts'),
                 this.props
             );
+            this.fs.copy(
+                this.templatePath('_src/_test/_tsconfig.json'),
+                this.destinationPath('src/test/tsconfig.json')
+            );
+            this.fs.copy(
+                this.templatePath('_src/_test/_webpack.config.js'),
+                this.destinationPath('src/test/webpack.config.js')
+            );
+            //spec
             this.fs.copyTpl(
                 this.templatePath('_src/_test/_spec/_modelSpec.ts'),
                 this.destinationPath('src/test/spec/' + this.props.model + 'Spec.ts'),
                 this.props
+            );
+            this.fs.copy(
+                this.templatePath('_src/_test/_spec/_tsconfig.json'),
+                this.destinationPath('src/test/spec/tsconfig.json')
+            );
+            this.fs.copy(
+                this.templatePath('_src/_test/_spec/_tests.webpack.js'),
+                this.destinationPath('src/test/spec/tests.webpack.js')
             );
         }
     },

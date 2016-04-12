@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "noImplicitAny": true,
+        "target": "ES5",
+        "jsx": "react",
+        "sourceMap": true
+    },
+    "filesGlob": [
+        "./src/test/spec/**/*.*",
+        "../../typings/tsd.d.ts"
+    ]
+}

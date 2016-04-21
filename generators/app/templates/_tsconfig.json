@@ -8,12 +8,11 @@
         "sourceMap": true,
         "outDir": "./dist"
     },
-    "filesGlob": [
-        "./src/app/**/*.*"
-    ],
     "exclude": [
         "dist",
         "node_modules",
-        "src/test"
+        "src/test",
+        "typings/browser.d.ts",
+        "typings/browser"
     ]
 }

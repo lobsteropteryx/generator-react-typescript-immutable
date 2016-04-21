@@ -1,0 +1,11 @@
+{
+  "name": "ges-header-footer",
+  "version": false,
+  "ambientDependencies": {
+    "immutable": "npm:immutable",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "jasmine-ajax": "github:DefinitelyTyped/DefinitelyTyped/jasmine-ajax/jasmine-ajax.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+  }
+}

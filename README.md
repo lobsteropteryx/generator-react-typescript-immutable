@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and generator-react-typescript-immutab
 
 ```bash
 npm install -g yo
-npm install -g generator-react-typescript-immutable
+npm install -g lobsteropteryx/generator-react-typescript-immutable
 ```
 
 Then generate your new project:

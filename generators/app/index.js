@@ -10,7 +10,7 @@ module.exports = yeoman.Base.extend({
 
         // Have Yeoman greet the user.
         this.log(yosay(
-            'Welcome to the glorious ' + chalk.red('generator-react-typescript-immutable') + ' generator!'
+            'Welcome to the glorious ' + chalk.red('generator-react-typescript-immutable ') + 'generator!'
         ));
 
         var prompts = [
@@ -50,8 +50,8 @@ module.exports = yeoman.Base.extend({
                 this.props
             );
             this.fs.copy(
-                this.templatePath('_tsd.json'),
-                this.destinationPath('tsd.json')
+                this.templatePath('_typings.json'),
+                this.destinationPath('typings.json')
             );
             this.fs.copy(
                 this.templatePath('_karma.conf.js'),
@@ -107,10 +107,6 @@ module.exports = yeoman.Base.extend({
                 this.templatePath('_src/_test/_spec/_modelSpec.ts'),
                 this.destinationPath('src/test/spec/' + this.props.model + 'Spec.ts'),
                 this.props
-            );
-            this.fs.copy(
-                this.templatePath('_src/_test/_spec/_tsconfig.json'),
-                this.destinationPath('src/test/spec/tsconfig.json')
             );
             this.fs.copy(
                 this.templatePath('_src/_test/_spec/_tests.webpack.js'),

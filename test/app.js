@@ -4,6 +4,9 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
 describe('generator-react-typescript-immutable:app', function () {
+  
+  this.timeout(15000);
+  
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
@@ -19,7 +22,7 @@ describe('generator-react-typescript-immutable:app', function () {
         'package.json',
         'readme.md',
         'tsconfig.json',
-        'tsd.json',
+        'typings.json',
         //src files
         'src/app/components/testComponent.tsx',
         'src/app/models/testComponentProps.ts',
@@ -31,7 +34,6 @@ describe('generator-react-typescript-immutable:app', function () {
         'src/test/webpack.config.js',
         //spec files
         'src/test/spec/testComponentPropsSpec.ts',
-        'src/test/spec/tsconfig.json',
         'src/test/spec/tests.webpack.js'
     ]);
   });

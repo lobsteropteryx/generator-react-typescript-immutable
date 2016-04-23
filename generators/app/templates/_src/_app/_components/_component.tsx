@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/tsd.d.ts" />
-
 import * as React from 'react';
 import <%=capModel%>, {I<%=capModel%>, I<%=capName%>State} from '../models/<%=model%>';
 

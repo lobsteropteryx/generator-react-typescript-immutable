@@ -3,3 +3,6 @@ typings/
 dist/
 src/test/**/*.js
 src/test/**/*.map
+
+!src/test/webpack.config.js
+!src/test/spec/tests.webpack.js

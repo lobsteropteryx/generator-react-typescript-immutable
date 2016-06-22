@@ -2,7 +2,7 @@
   "name": "ges-header-footer",
   "version": false,
   "dependencies": {
-    "immutable": "npm:immutable",
+    "immutable": "npm:immutable"
   },
   "globalDependencies": {
     "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
@@ -13,6 +13,6 @@
   },
   "globalDevDependencies": {
     "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
-    "jasmine-ajax": "github:DefinitelyTyped/DefinitelyTyped/jasmine-ajax/jasmine-ajax.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "jasmine-ajax": "github:DefinitelyTyped/DefinitelyTyped/jasmine-ajax/jasmine-ajax.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313"
   }
 }

@@ -62,6 +62,10 @@ module.exports = yeoman.Base.extend({
                 this.destinationPath('tsconfig.json')
             );
             this.fs.copy(
+                this.templatePath('_tslint.json'),
+                this.destinationPath('tslint.json')
+            );
+            this.fs.copy(
                 this.templatePath('_.gitignore'),
                 this.destinationPath('.gitignore')
             );

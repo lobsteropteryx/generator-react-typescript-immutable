@@ -8,7 +8,10 @@
         "buildApp": "tsc",
         "watchApp": "tsc --watch",
         "buildTests": "webpack --config ./src/test/webpack.config.js",
-        "watchTests": "webpack --watch --progress --color --config ./src/test/webpack.config.js",
+        "dev": "concurrently --kill-others \"webpack --watch --progress --color --config ./src/test/webpack.config.js\" \"npm run lite\" \"npm run test\" ",
+        "typings": "typings",
+        "lite": "lite-server",
+        "postinstall": "typings install",
         "test": "karma start"
     },
     "repository": {
@@ -22,6 +25,8 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
+        "browser-sync": "^2.11.1",
+        "concurrently": "^2.1.0",
         "jasmine-ajax": "~3.1.1",
         "jasmine-core": "~2.3.4",
         "karma": "^0.13.21",
@@ -31,7 +36,7 @@
         "karma-jasmine-ajax": "~0.1.12",
         "karma-phantomjs-launcher": "^1.0.0",
         "karma-webpack": "^1.7.0",
-        "local-web-server": "^1.2.2",
+        "lite-server": "^2.2.0",
         "phantomjs-prebuilt": "^2.1.5",
         "requirejs": "^2.2.0",
         "ts-loader": "^0.8.2",

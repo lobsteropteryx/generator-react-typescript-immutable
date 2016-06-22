@@ -35,7 +35,8 @@ describe('generator-react-typescript-immutable:app', function () {
         'src/test/webpack.config.js',
         //spec files
         'src/test/spec/testComponentPropsSpec.ts',
-        'src/test/spec/tests.webpack.js'
+        'src/test/spec/tests.webpack.js',
+        'src/test/spec/test-main.js'
     ]);
   });
 });

@@ -124,6 +124,10 @@ module.exports = yeoman.Base.extend({
                 this.templatePath('_src/_test/_spec/_tests.webpack.js'),
                 this.destinationPath('src/test/spec/tests.webpack.js')
             );
+            this.fs.copy(
+                this.templatePath('_src/_test/_spec/_test-main.js'),
+                this.destinationPath('src/test/spec/test-main.js')
+            );
         }
     },
 

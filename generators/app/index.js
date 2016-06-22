@@ -3,7 +3,15 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
+var toCamelCase = function (str) {
+    return str
+        .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+        .replace(/\s/g, '')
+        .replace(/^(.)/, function($1) { return $1.toLowerCase(); });
+};
+
 module.exports = yeoman.Base.extend({
+
 
     prompting: function () {
         var done = this.async();
@@ -18,7 +26,7 @@ module.exports = yeoman.Base.extend({
                 type: 'input',
                 name: 'name',
                 message: 'Component name',
-                default: this.appname
+                default: toCamelCase(this.appname)
             },
             {
                 type: 'input',

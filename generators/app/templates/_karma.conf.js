@@ -1,10 +1,42 @@
 // Karma configuration
 // Generated on Thu Jun 11 2015 22:45:26 GMT-0700 (Pacific Daylight Time)
 
-var webpackConfig = require('./src/test/webpack.config.js');
-webpackConfig.entry = {};
+var webpackConfig = {
+    entry: {},
+    output: {
+        filename: './src/test/[name].bundle.js',
+        publicPath: './',
+        libraryTarget: "amd"
+    }
+    ,
+    resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+    }
+    ,
+    module: {
+        loaders: [
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader'
+            }
+        ]
+    }
+    ,
+    externals: [
+        function (context, request, callback) {
+            if (/^dojo/.test(request) ||
+                /^dijit/.test(request) ||
+                /^esri/.test(request)
+            ) {
+                return callback(null, "amd " + request);
+            }
+            callback();
+        }
+    ],
+    devtool: 'source-map'
+};
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -12,39 +44,37 @@ module.exports = function(config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: [ 'jasmine-ajax', 'jasmine'],
+        frameworks: ['jasmine-ajax', 'jasmine', 'dojo'],
 
 
         // list of files / patterns to load in the browser
         files: [
-            'src/test/spec/tests.webpack.js'
+            {pattern: 'src/test/spec/tests.webpack.js', included: false},
+            'src/test/spec/test-main.js'
         ],
 
         webpack: webpackConfig,
 
-        webpackServer: {
-            noInfo: true
-        },
+        //webpackServer: {
+        //    noInfo: true
+        //},
 
         autowatch: true,
 
         // list of files to exclude
-        exclude: [
-
-        ],
+        exclude: [],
 
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-
             'src/test/spec/tests.webpack.js': ['webpack']
         },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['dots'],
 
 
         // web server port

@@ -23,6 +23,7 @@ describe('generator-react-typescript-immutable:app', function () {
         'readme.md',
         'tsconfig.json',
         'typings.json',
+        'tslint.json',
         //src files
         'src/app/components/testComponent.tsx',
         'src/app/models/testComponentProps.ts',
@@ -34,7 +35,8 @@ describe('generator-react-typescript-immutable:app', function () {
         'src/test/webpack.config.js',
         //spec files
         'src/test/spec/testComponentPropsSpec.ts',
-        'src/test/spec/tests.webpack.js'
+        'src/test/spec/tests.webpack.js',
+        'src/test/spec/test-main.js'
     ]);
   });
 });

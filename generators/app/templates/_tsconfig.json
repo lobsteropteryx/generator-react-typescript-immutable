@@ -6,13 +6,7 @@
         "target": "ES5",
         "jsx": "react",
         "sourceMap": true,
-        "outDir": "./dist"
-    },
-    "exclude": [
-        "dist",
-        "node_modules",
-        "src/test",
-        "typings/browser.d.ts",
-        "typings/browser"
-    ]
+        "outDir": "./dist",
+        "moduleResolution": "node"
+    }
 }

@@ -1,7 +1,5 @@
-/// <reference path="../../../typings/browser.d.ts" />
-
 import <%=capModel%> from '../../app/models/<%=model%>';
-//
+
 describe("<%=capModel%>", () => {
 
     it("Can be instantiated", () => {

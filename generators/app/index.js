@@ -3,7 +3,15 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
+var toCamelCase = function (str) {
+    return str
+        .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+        .replace(/\s/g, '')
+        .replace(/^(.)/, function($1) { return $1.toLowerCase(); });
+};
+
 module.exports = yeoman.Base.extend({
+
 
     prompting: function () {
         var done = this.async();
@@ -18,7 +26,7 @@ module.exports = yeoman.Base.extend({
                 type: 'input',
                 name: 'name',
                 message: 'Component name',
-                default: this.appname
+                default: toCamelCase(this.appname)
             },
             {
                 type: 'input',
@@ -60,6 +68,10 @@ module.exports = yeoman.Base.extend({
             this.fs.copy(
                 this.templatePath('_tsconfig.json'),
                 this.destinationPath('tsconfig.json')
+            );
+            this.fs.copy(
+                this.templatePath('_tslint.json'),
+                this.destinationPath('tslint.json')
             );
             this.fs.copy(
                 this.templatePath('_.gitignore'),
@@ -111,6 +123,10 @@ module.exports = yeoman.Base.extend({
             this.fs.copy(
                 this.templatePath('_src/_test/_spec/_tests.webpack.js'),
                 this.destinationPath('src/test/spec/tests.webpack.js')
+            );
+            this.fs.copy(
+                this.templatePath('_src/_test/_spec/_test-main.js'),
+                this.destinationPath('src/test/spec/test-main.js')
             );
         }
     },

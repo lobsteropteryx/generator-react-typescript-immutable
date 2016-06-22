@@ -6,6 +6,9 @@
 
 <body>
     <div id="content"></div>
-    <script data-main="main.bundle.js" src="/node_modules/requirejs/require.js"></script>
+    <script src="/node_modules/requirejs/require.js"></script>
+    <script>
+        require(["vendor.bundle.js", "main.bundle.js"], function (vendor, main) {});
+    </script>
 </body>
 </html>

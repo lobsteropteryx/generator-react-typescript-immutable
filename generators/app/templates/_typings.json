@@ -1,11 +1,18 @@
 {
   "name": "ges-header-footer",
   "version": false,
-  "ambientDependencies": {
-    "immutable": "npm:immutable",
-    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
-    "jasmine-ajax": "github:DefinitelyTyped/DefinitelyTyped/jasmine-ajax/jasmine-ajax.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+  "dependencies": {
+    "immutable": "npm:immutable"
+  },
+  "globalDependencies": {
     "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
-    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "arcgis-js-api": "github:Esri/jsapi-resources/3.x/typescript/arcgis-js-api.d.ts",
+    "dojo": "github:lobsteropteryx/DefinitelyTyped/dojo/dojo.d.ts#07a9f0b7f45b90eaef7db317b2c2cf3a29d415a2",
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654"
+  },
+  "globalDevDependencies": {
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313",
+    "jasmine-ajax": "github:DefinitelyTyped/DefinitelyTyped/jasmine-ajax/jasmine-ajax.d.ts#9f0f926a12026287b5a4a229e5672c01e7549313"
   }
 }

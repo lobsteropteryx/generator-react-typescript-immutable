@@ -8,7 +8,10 @@
         "buildApp": "tsc",
         "watchApp": "tsc --watch",
         "buildTests": "webpack --config ./src/test/webpack.config.js",
-        "watchTests": "webpack --watch --progress --color --config ./src/test/webpack.config.js",
+        "dev": "concurrently --kill-others \"webpack --watch --progress --color --config ./src/test/webpack.config.js\" \"npm run lite\" ",
+        "typings": "typings",
+        "lite": "lite-server",
+        "postinstall": "typings install",
         "test": "karma start"
     },
     "repository": {
@@ -23,28 +26,35 @@
     "license": "MIT",
     "devDependencies": {
         "browser-sync": "^2.11.1",
-        "glob": "~7.0.3",
+        "concurrently": "^2.1.0",
+        "css-loader": "^0.23.1",
+        "file-loader": "^0.8.5",
         "jasmine-ajax": "~3.1.1",
         "jasmine-core": "~2.3.4",
+        "json-loader": "^0.5.4",
         "karma": "^0.13.21",
         "karma-chrome-launcher": "~0.1.12",
+        "karma-dojo": "0.0.1",
         "karma-ie-launcher": "~0.2.0",
         "karma-jasmine": "~0.3.5",
         "karma-jasmine-ajax": "~0.1.12",
         "karma-phantomjs-launcher": "^1.0.0",
         "karma-webpack": "^1.7.0",
-        "local-web-server": "^1.2.2",
+        "lite-server": "^2.2.0",
         "phantomjs-prebuilt": "^2.1.5",
         "requirejs": "^2.2.0",
+        "style-loader": "^0.13.1",
         "ts-loader": "^0.8.2",
         "tslint": "^3.2.1",
         "typescript": "^1.8.5",
-        "typings": "^0.7.12",
+        "typings": "1.2.0",
+        "url-loader": "^0.5.7",
         "webpack": "^1.12.15"
     },
     "dependencies": {
-        "immutable": "~3.7.6",
+        "immutable": "~3.8.1",
         "react": "^0.14.7",
-        "react-dom": "^0.14.7"
+        "react-dom": "^0.14.7",
+        "es6-shim": "^0.35.1"
     }
 }

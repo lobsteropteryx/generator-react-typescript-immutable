@@ -77,6 +77,10 @@ module.exports = yeoman.Base.extend({
                 this.templatePath('_.gitignore'),
                 this.destinationPath('.gitignore')
             );
+            this.fs.copy(
+                this.templatePath('_bs-config.json'),
+                this.destinationPath('bs-config.json')
+            );
         },
         src: function () {
             this.fs.copyTpl(

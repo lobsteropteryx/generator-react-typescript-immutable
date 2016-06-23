@@ -24,6 +24,7 @@ describe('generator-react-typescript-immutable:app', function () {
         'tsconfig.json',
         'typings.json',
         'tslint.json',
+        'bs-config.json',
         //src files
         'src/app/components/testComponent.tsx',
         'src/app/models/testComponentProps.ts',

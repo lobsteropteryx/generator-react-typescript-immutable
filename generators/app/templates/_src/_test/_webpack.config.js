@@ -10,7 +10,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: './dist/[name].bundle.js',
+        filename: './src/test/[name].bundle.js',
         publicPath: './',
         libraryTarget: "amd"
     },
